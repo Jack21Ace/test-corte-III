@@ -6,7 +6,7 @@ if __name__ == '__main__':
     def options():
         opt = ''
         while (opt != 'x'):
-            opt = str(input("Ingrese una de las siguientes opciones\n-----//-----//-----//-----//-----//-----//-----//-----\n1-) Listar elementos\n2-) Insertar al inicio\n3-) Insertar despues de\n4-) Insertar antes de\n5-) Insertar al final\n6-) Eliminar el primero\n7-) Eliminar el ultimo\n8-) Eliminar selección\nX-) Salir\t").lower())
+            opt = str(input("Ingrese una de las siguientes opciones\n-----//-----//-----//-----//-----//-----//-----//-----\n1-) Listar elementos\n2-) Insertar al inicio\n3-) Insertar despues de\n4-) Insertar antes de\n5-) Insertar al final\n6-) Eliminar el primero\n7-) Eliminar el ultimo\n8-) Eliminar selección\n9-) Invertir Lista\nX-) Salir\t").lower())
             if opt == 'x':
                 print('Bye')
             elif opt == '1':
@@ -48,6 +48,10 @@ if __name__ == '__main__':
                 new_linked_list.delete_element_by_value(x)
                 print('\tLista Actual\n','----'*7,'\n')
                 new_linked_list.traverse_list()
+            elif opt == '9':
+                new_linked_list.delete_element_by_value(x)
+                print('\tLista Actual\n','----'*7,'\n')
+                new_linked_list.reverse_linked_list()
             else:
                 print('Opcion incorrecta')
     options()
